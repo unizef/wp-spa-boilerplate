@@ -1,20 +1,9 @@
 {
-  "name": "wp-spa-boilerplate",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": "true",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/unizef/wp-spa-boilerplate.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/unizef/wp-spa-boilerplate/issues"
+    "start": "webpack server",
+    "watch": "webpack-watch",
+    "build": "webpack"
   },
   "homepage": "https://github.com/unizef/wp-spa-boilerplate#readme",
   "devDependencies": {
