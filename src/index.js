@@ -5,3 +5,12 @@ const hapjes = {
 };
 
 console.log(hapjes);
+
+const drankjes = {
+  ...hapjes,
+  zoet: "fernandes",
+  zuur: "moscow mule",
+  achteraf: "chocje",
+};
+
+console.log(hapjes, drankjes);
