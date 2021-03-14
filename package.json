@@ -1,12 +1,20 @@
 {
+  "name": "wp-spa-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "private": "true",
   "scripts": {
-    "start": "webpack serve",
+    "dev": "webpack serve",
     "watch": "webpack-watch",
-    "build": "webpack"
+    "build": "NODE_ENV=production webpack",
+    "build-dev": "webpack"
   },
   "homepage": "https://github.com/unizef/wp-spa-boilerplate#readme",
   "devDependencies": {
+    "@babel/core": "^7.13.10",
+    "@babel/preset-env": "^7.13.10",
+    "babel-loader": "^8.2.2",
     "webpack": "^5.25.0",
     "webpack-cli": "^4.5.0",
     "webpack-dev-server": "^3.11.2"
