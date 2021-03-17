@@ -1,16 +1,18 @@
-const hapjes = {
-  vooraf: "lekker",
-  tijdens: "kaasje",
-  achteraf: "pate royal",
+import "./styles/index.scss";
+
+const fruit = {
+  mango: 5,
+  jackfruit: 2,
+  banana: 10,
 };
 
-console.log(hapjes);
+console.log(fruit);
 
-const drankjes = {
-  ...hapjes,
-  zoet: "fernandes",
-  zuur: "moscow mule",
-  achteraf: "chocje",
+const groceries = {
+  ...fruit,
+  "ficus lyrata": 1,
+  facewash: 2,
+  mirror: 1,
 };
 
-console.log(hapjes, drankjes);
+console.log(groceries);
