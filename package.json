@@ -8,7 +8,8 @@
     "dev": "webpack serve",
     "watch": "webpack-watch",
     "build": "NODE_ENV=production webpack",
-    "build-dev": "webpack"
+    "build-dev": "webpack",
+    "clean": "rm -rf dist"
   },
   "homepage": "https://github.com/unizef/wp-spa-boilerplate#readme",
   "devDependencies": {

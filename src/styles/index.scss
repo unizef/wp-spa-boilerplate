@@ -1,1 +1,14 @@
 @use "global";
+@use "hero";
+
+// Autoprefixes and fallbacks will be visible inside main.js
+//  after building (PostCSS & Browserslist)
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  font-size: 1.5rem;
+}

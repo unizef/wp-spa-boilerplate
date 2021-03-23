@@ -8,12 +8,23 @@ if (process.env.NODE_ENV === "production") {
 module.exports = {
   mode: mode,
 
+  output: {
+    assetModuleFilename: "img/[hash][ext][query]",
+  },
+
   module: {
     rules: [
       {
-        test: /\.s?css$/i,
+        test: /\.(png|jpe?g|gif|svg)$/i,
+        type: "asset/resource",
+      },
+      {
+        test: /\.(s[ac]|c)ss$/i,
         use: [
-          MiniCssExtractPlugin.loader,
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: { publicPath: "" },
+          },
           "css-loader",
           "postcss-loader",
           "sass-loader",
@@ -26,7 +37,7 @@ module.exports = {
           loader: "babel-loader",
           options: {
             presets: ["@babel/preset-env"],
-            rootMode: "upward",
+            // rootMode: "upward",
           },
         },
       },

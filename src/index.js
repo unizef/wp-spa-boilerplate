@@ -1,5 +1,15 @@
 import "./styles/index.scss";
+import sword from "./images/swc-sword.png";
+import swordSvg from "./images/sword.svg";
 
+// Image example
+const png = document.querySelector(".png img");
+png.setAttribute("src", sword);
+
+const svg = document.querySelector(".svg img");
+svg.setAttribute("src", swordSvg);
+
+// JS example
 const fruit = {
   mango: 5,
   jackfruit: 2,

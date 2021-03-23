@@ -1,3 +1,3 @@
-module.exports = {
-  plugins: ["@babel/preset-env"],
-};
+// module.exports = {
+//   plugins: ["@babel/preset-env"],
+// };
