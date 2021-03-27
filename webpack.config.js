@@ -10,7 +10,7 @@ if (process.env.NODE_ENV === "production") {
 
 module.exports = {
   mode: mode,
-
+  entry: "./src/app.js",
   output: {
     path: path.resolve(__dirname, "dist"),
     assetModuleFilename: "img/[hash][ext][query]",
@@ -20,6 +20,10 @@ module.exports = {
     rules: [
       {
         test: /\.(png|jpe?g|gif|svg)$/i,
+        type: "asset/resource",
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: "asset/resource",
       },
       {
@@ -51,12 +55,15 @@ module.exports = {
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
-      template: "./src/index.html",
+      title: "webpack Boilerplate", // title of index.html
+      template: path.resolve(__dirname, "./src/template.html"), // template file
+      filename: "index.html", // output file
     }),
   ],
   devtool: "source-map",
   devServer: {
     contentBase: "./dist",
     hot: true,
+    port: 8080,
   },
 };

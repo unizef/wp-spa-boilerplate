@@ -1,14 +1,35 @@
 @use "global";
-@use "hero";
+@use "fonts";
 
-// Autoprefixes and fallbacks will be visible inside main.js
-//  after building (PostCSS & Browserslist)
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+// HERO SECTION
+.hero {
+  background: url("../images/swc-banner.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 300px;
+  width: 100%;
 }
 
-button {
-  font-size: 1.5rem;
+// SWORDS
+img {
+  display: block;
+  width: 50%;
+  margin: 0 auto 30px;
+}
+
+// SWORD LIST
+.center {
+  display: flex;
+  justify-content: center;
+}
+ul {
+  list-style-image: url("../images/sword-32x32.png");
+}
+
+// INTERESTING
+h1 {
+  color: rebeccapurple;
+  // imported from __fonts
+  font-family: "Gilam";
+  font-size: 3rem;
 }
