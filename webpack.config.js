@@ -62,8 +62,14 @@ module.exports = {
   ],
   devtool: "source-map",
   devServer: {
-    contentBase: "./dist",
-    hot: true,
+    // used to be: contentBase: "./dist",
+    static: {
+      directory: path.join(__dirname, "dist/"),
+    },
     port: 8080,
+    // devMiddleware: {
+    //   publicPath: "https://localhost:8080/dist/",
+    // },
+    hot: "only",
   },
 };
